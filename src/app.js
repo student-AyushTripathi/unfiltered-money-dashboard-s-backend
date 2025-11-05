@@ -90,6 +90,10 @@ try {
   console.error("❌ Failed to mount section order routes:", error.message);
 }
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is live and working!");
+});
+
 export { app };
 
 
