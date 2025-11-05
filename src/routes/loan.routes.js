@@ -3,7 +3,7 @@ import express from 'express';
 import {
   getAllTopLenders, createTopLender, getTopLenderById, updateTopLender, deleteTopLender,
 
-} from '../controllers/loan/toplender.controller.js';
+} from '../controllers/loan/TopLender.controller.js';
 import {getAllCompareByCategories, createCompareByCategory, getCompareByCategoryById, updateCompareByCategory, deleteCompareByCategory} from '../controllers/loan/comparebycategory.controller.js';
 const router = express.Router();
 
