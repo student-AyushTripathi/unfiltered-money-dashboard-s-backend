@@ -60,7 +60,11 @@ const app = express();
 
 
 // ✅ CORS Setup (Robust)
-const allowedOrigins = process.env.CORS_ORIGIN?.split(",") || [];
+// const allowedOrigins = process.env.CORS_ORIGIN?.split(",") || [];
+const allowedOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(",").map(o => o.trim())
+  : [];
+
 
 app.use((req, res, next) => {
   const origin = req.headers.origin;
